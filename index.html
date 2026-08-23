@@ -1,214 +1,1108 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-    <meta name="google-site-verification" content="IV_IqFC-M4tCbwkt-PTtIVr3tttLzL9dqO3evfJuBp0" />
-    <title>Profil | Nur Dwi Nova Pramajaya</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0F4C81',
-                        secondary: '#2A70B9',
-                        neutral: '#F8F9FC',
-                        dark: '#2D3748',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
+    <!-- Verifikasi Google Search Console -->
+    <meta name="google-site-verification" content="IV_IqFC-M4tCbwkt-PTtIVr3tttLzL9dqO3evfJuBp0" /><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profil | Nur Dwi Nova Pramajaya</title>
+
+<meta name="description" content="Website profil pribadi Nur Dwi Nova Pramajaya, siswa Teknik Jaringan Komputer dan Telekomunikasi SMKN 1 Cirebon.">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: #1e293b;
+        background:
+            linear-gradient(135deg, #eef5ff 0%, #f8fbff 50%, #eaf4ff 100%);
+    }
+
+
+    /* Background sederhana */
+
+    .background-circle {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.25;
+        z-index: -1;
+    }
+
+    .circle-one {
+        width: 300px;
+        height: 300px;
+        background: #60a5fa;
+        top: -100px;
+        left: -100px;
+    }
+
+    .circle-two {
+        width: 350px;
+        height: 350px;
+        background: #38bdf8;
+        bottom: -150px;
+        right: -100px;
+    }
+
+
+    /* Navbar */
+
+    nav {
+        position: sticky;
+        top: 15px;
+        z-index: 50;
+        width: 92%;
+        max-width: 1000px;
+        margin: 15px auto 0;
+    }
+
+    .nav-content {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(15, 76, 129, 0.08);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 14px 22px;
+    }
+
+    .logo {
+        font-size: 17px;
+        font-weight: 700;
+        color: #0f4c81;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-menu a {
+        text-decoration: none;
+        color: #64748b;
+        font-size: 13px;
+        transition: 0.3s;
+    }
+
+    .nav-menu a:hover {
+        color: #0f4c81;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        max-width: 1000px;
+        margin: 45px auto 0;
+        padding: 55px 25px;
+        text-align: center;
+
+        background:
+            linear-gradient(135deg, #0f4c81, #2563a6);
+
+        border-radius: 28px;
+
+        color: white;
+
+        box-shadow:
+            0 20px 50px rgba(15, 76, 129, 0.18);
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+
+        margin: auto;
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.2);
+
+        transition: 0.3s;
+    }
+
+    .profile-photo:hover {
+        transform: scale(1.03);
+    }
+
+    .hero h1 {
+        font-size: clamp(25px, 5vw, 42px);
+        margin-top: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        margin-top: 10px;
+        color: #dbeafe;
+    }
+
+    .hero-badge {
+        display: inline-block;
+
+        margin-top: 20px;
+        padding: 8px 18px;
+
+        border-radius: 50px;
+
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.2);
+
+        font-size: 13px;
+    }
+
+
+    /* Container */
+
+    .container {
+        width: 92%;
+        max-width: 1000px;
+        margin: 50px auto;
+    }
+
+
+    /* Section */
+
+    section {
+        margin-bottom: 70px;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        color: #0f4c81;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .section-header p {
+        color: #64748b;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .line {
+        width: 70px;
+        height: 4px;
+
+        background:
+            linear-gradient(to right, #0f4c81, #38bdf8);
+
+        border-radius: 10px;
+
+        margin-top: 10px;
+    }
+
+
+    /* Kartu Informasi */
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 18px;
+    }
+
+    .info-card {
+        background: white;
+        padding: 22px;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+
+        transition: 0.3s;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+
+        box-shadow:
+            0 15px 35px rgba(15, 76, 129, 0.12);
+    }
+
+    .info-icon {
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 12px;
+
+        background: #eaf4ff;
+        color: #0f4c81;
+
+        margin-bottom: 15px;
+    }
+
+    .info-card small {
+        color: #94a3b8;
+    }
+
+    .info-card h3 {
+        font-size: 15px;
+        margin-top: 5px;
+        font-weight: 600;
+    }
+
+
+    /* Tentang Saya */
+
+    .about {
+        background: white;
+        padding: 30px;
+
+        border-radius: 20px;
+
+        line-height: 1.8;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+    }
+
+    .about p {
+        margin-bottom: 16px;
+        color: #475569;
+        text-align: justify;
+    }
+
+    .quote {
+        margin-top: 25px;
+
+        padding: 20px;
+
+        text-align: center;
+
+        background: #f0f7ff;
+
+        border-left: 4px solid #0f4c81;
+
+        border-radius: 12px;
+
+        color: #0f4c81;
+
+        font-weight: 600;
+    }
+
+
+    /* Skill */
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 18px;
+    }
+
+    .skill-card {
+        background: white;
+        padding: 22px;
+
+        border-radius: 18px;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+    }
+
+    .skill-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .skill-percent {
+        color: #0f4c81;
+    }
+
+    .progress {
+        height: 8px;
+        background: #e2e8f0;
+
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background:
+            linear-gradient(to right, #0f4c81, #38bdf8);
+
+        border-radius: 10px;
+
+        transition: width 1s ease;
+    }
+
+
+    /* Pendidikan */
+
+    .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+    }
+
+    .education-card {
+        background: white;
+
+        border-radius: 18px;
+        overflow: hidden;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+
+        transition: 0.3s;
+    }
+
+    .education-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .education-card img {
+        width: 100%;
+        height: 250px;
+
+        object-fit: contain;
+
+        background: #f8fafc;
+    }
+
+    .education-content {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .education-content h3 {
+        color: #0f4c81;
+        font-weight: 700;
+    }
+
+    .education-content p {
+        color: #64748b;
+        font-size: 13px;
+        margin-top: 5px;
+    }
+
+
+    /* Prestasi */
+
+    .achievement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+    .achievement-card {
+        background: white;
+
+        border-radius: 18px;
+        overflow: hidden;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+
+        text-align: center;
+
+        transition: 0.3s;
+    }
+
+    .achievement-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .achievement-card img {
+        width: 100%;
+        height: 250px;
+
+        object-fit: contain;
+
+        background: #f8fafc;
+        padding: 10px;
+    }
+
+    .achievement-content {
+        padding: 20px;
+    }
+
+    .achievement-content i {
+        color: #f59e0b;
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+
+    .achievement-content h3 {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .achievement-content p {
+        font-size: 13px;
+        color: #64748b;
+        margin-top: 5px;
+    }
+
+
+    /* Sertifikat */
+
+    .certificate {
+        margin-top: 25px;
+
+        background: white;
+
+        border-radius: 20px;
+        overflow: hidden;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+
+        text-align: center;
+    }
+
+    .certificate img {
+        width: 100%;
+        max-height: 450px;
+
+        object-fit: contain;
+
+        background: #f8fafc;
+
+        padding: 15px;
+    }
+
+    .certificate-content {
+        padding: 25px;
+    }
+
+
+    /* Kontak */
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .social {
+        width: 150px;
+
+        padding: 25px;
+
+        background: white;
+
+        border-radius: 18px;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: #1e293b;
+
+        box-shadow:
+            0 8px 25px rgba(15, 76, 129, 0.06);
+
+        transition: 0.3s;
+    }
+
+    .social:hover {
+        transform: translateY(-6px);
+    }
+
+    .social i {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        color: #ef4444;
+    }
+
+    .youtube {
+        color: #dc2626;
+    }
+
+    .instagram {
+        color: #db2777;
+    }
+
+
+    /* Footer */
+
+    footer {
+        text-align: center;
+
+        padding: 30px 20px;
+
+        color: #64748b;
+
+        font-size: 13px;
+    }
+
+
+    /* Animasi saat scroll */
+
+    .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+
+        transition:
+            opacity 0.7s ease,
+            transform 0.7s ease;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    /* Responsive */
+
+    @media (max-width: 650px) {
+
+        .nav-menu {
+            display: none;
         }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .shadow-soft {
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
-            }
-            .border-dashed-custom {
-                border-style: dashed;
-                border-width: 1px;
-            }
+
+        .hero {
+            width: 92%;
+            padding: 45px 20px;
+            margin-top: 30px;
         }
-    </style>
-</head>
-<body class="bg-neutral min-h-screen font-sans text-dark">
-    <div class="container mx-auto px-4 py-10 max-w-3xl">
-        <!-- Kartu Utama -->
-        <div class="bg-white rounded-2xl shadow-soft overflow-hidden">
-            
-            <!-- Bagian Header / Atas -->
-            <div class="bg-gradient-to-r from-primary to-secondary px-8 py-10 text-center">
-                <img src="IMG_20251001_161401.jpg" alt="Foto Profil" class="w-36 h-36 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4">
-                <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white">NUR DWI NOVA PRAMAJAYA</h1>
-                <p class="text-blue-100 text-lg">Siswa SMKN 1 Cirebon | Teknik Jaringan Komputer dan Telekomunikasi</p>
-            </div>
 
-            <!-- Bagian Isi -->
-            <div class="px-8 py-10">
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+        }
 
-                <!-- Informasi Pribadi -->
-                <div class="mb-10">
-                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5">
-                        <i class="fa fa-user-circle mr-2"></i> Informasi Pribadi
-                    </h2>
-                    <div class="grid md:grid-cols-2 gap-4">
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
-                            <span class="font-medium text-gray-600 w-28">Nama Lengkap</span>
-                            <span class="text-right flex-1">Nur Dwi Nova Pramajaya</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
-                            <span class="font-medium text-gray-600 w-28">Tempat Lahir</span>
-                            <span class="text-right flex-1">Kuningan</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
-                            <span class="font-medium text-gray-600 w-28">Tanggal Lahir</span>
-                            <span class="text-right flex-1">30 November 2009</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
-                            <span class="font-medium text-gray-600 w-28">Sekolah</span>
-                            <span class="text-right flex-1">SMKN 1 Cirebon</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
-                            <span class="font-medium text-gray-600 w-28">Kelas</span>
-                            <span class="text-right flex-1">XI TJKT 2</span>
-                        </div>
-                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200 md:col-span-2">
-                            <span class="font-medium text-gray-600 w-28">Hobi</span>
-                            <span class="text-right flex-1">Berlari</span>
-                        </div>
-                    </div>
-                </div>
+        .about {
+            padding: 22px;
+        }
 
-                <!-- Tentang Saya -->
-                <div class="mb-10">
-                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5">
-                        <i class="fa fa-quote-left mr-2"></i> Tentang Saya
-                    </h2>
-                    <div class="text-gray-700 leading-relaxed text-justify space-y-3">
-                        <p>Halo, perkenalkan nama saya Nur Dwi Nova Pramajaya. Saya adalah siswa kelas XI TJKT 2 di SMK Negeri 1 Cirebon. Saya lahir di Kuningan pada tanggal 30 November 2009. Saat ini saya sedang menempuh pendidikan kejuruan dengan fokus utama pada Teknik Jaringan Komputer dan Telekomunikasi.</p>
-                        
-                        <p>Saya memiliki ketertarikan yang besar terhadap dunia teknologi, khususnya bagaimana jaringan bekerja, cara konfigurasi perangkat, serta sistem komunikasi data. Saya memilih jurusan ini karena saya ingin memahami lebih dalam tentang dunia IT dan berharap suatu hari nanti bisa berkarier di bidang teknologi sebagai ahli jaringan atau tenaga profesional di bidang telekomunikasi.</p>
-                        
-                        <p>Di sela-sela kesibukan belajar, saya memiliki hobi berlari. Bagi saya, berlari bukan hanya sekadar olahraga untuk menjaga kesehatan tubuh, tetapi juga sarana melatih kedisiplinan, ketahanan mental, dan semangat pantang menyerah. Prinsip hidup yang saya pegang adalah "Terus melangkah meski berat, sampai mencapai garis akhir". Prinsip ini selalu saya terapkan dalam segala hal, termasuk saat mengerjakan tugas sekolah maupun menghadapi tantangan baru.</p>
-                        
-                        <p>Saya adalah pribadi yang ingin terus berkembang, suka belajar hal baru, dan mudah bergaul dengan siapa saja. Saya percaya bahwa dengan kerja keras, ketekunan, dan rasa ingin tahu yang tinggi, saya bisa meraih cita-cita saya dan menjadi orang yang berguna bagi keluarga, masyarakat, dan bangsa.</p>
-                        
-                        <p>Terima kasih telah mengunjungi halaman profil saya. Jika ada keperluan, ingin berkenalan, atau berdiskusi seputar teknologi, silakan hubungi saya melalui kontak di bawah ini.</p>
-                    </div>
-                </div>
+    }
 
-               
+</style>
 
-<!-- ------------------------------ BAGIAN PERJALANAN SEKOLAH ------------------------------ -->
-<div class="mb-8">
-    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-4">
-        <i class="fa fa-graduation-cap mr-2"></i> Perjalanan Pendidikan
-    </h2>
-    <div class="grid md:grid-cols-3 gap-4">
-        <!-- SD -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center">
-            <img src="IMG-20240913-WA0002.jpg" alt="Kelulusan SD" class="w-full h-56 object-contain bg-gray-100">
-            <div class="p-3">
-                <h3 class="font-bold text-primary">SDN Citikur</h3>
-                <p class="text-gray-600 text-sm">Angkatan 2016 - 2022</p>
-            </div>
-        </div>
-        <!-- SMP -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center">
-            <img src="IMG-20260517-WA0069.jpg" alt="Kelulusan SMP" class="w-full h-56 object-contain bg-gray-100">
-            <div class="p-3">
-                <h3 class="font-bold text-primary">SMPN 2 Ciwaru</h3>
-                <p class="text-gray-600 text-sm">Angkatan 2022 - 2025</p>
-            </div>
-        </div>
-        <!-- SMK -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow text-center">
-            <img src="IMG-20260420-WA0023.jpg" alt="Masa SMK" class="w-full h-56 object-contain bg-gray-100">
-            <div class="p-3">
-                <h3 class="font-bold text-primary">SMKN 1 Cirebon</h3>
-                <p class="text-gray-600 text-sm">Angkatan 2025 - Sekarang</p>
-            </div>
-        </div>
+</head><body><!-- Background --><div class="background-circle circle-one"></div>
+<div class="background-circle circle-two"></div><!-- Navbar --><nav><div class="nav-content">
+
+    <div class="logo">
+        NOVA PROFILE
     </div>
+
+    <div class="nav-menu">
+        <a href="#tentang">Tentang</a>
+        <a href="#keahlian">Keahlian</a>
+        <a href="#pendidikan">Pendidikan</a>
+        <a href="#prestasi">Prestasi</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
 </div>
 
-                <!-- ------------------------------ BAGIAN PRESTASI ------------------------------ -->
-<div class="mb-8">
-    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-4">
-        <i class="fa fa-trophy mr-2"></i> Prestasi & Penghargaan
-    </h2>
-    <div class="grid md:grid-cols-2 gap-4">
-        <!-- Prestasi 1 -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-center">
-            <img src="IMG_20230625_075920.jpg" alt="Prestasi Kelas 7" class="w-full md:w-1/2 h-48 object-contain bg-gray-100">
-            <div class="p-3 text-center md:text-left">
-                <span class="text-sm text-gray-500">Juni 2023</span>
-                <h3 class="font-bold text-lg text-dark mt-1">Peringkat 3 Kelas</h3>
-                <p class="text-gray-600 text-sm">Kelas 7 - Semester 2</p>
-            </div>
-        </div>
-        <!-- Prestasi 2 -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row items-center">
-            <img src="IMG_20231223_145952.jpg" alt="Prestasi Kelas 8" class="w-full md:w-1/2 h-48 object-contain bg-gray-100">
-            <div class="p-3 text-center md:text-left">
-                <span class="text-sm text-gray-500">Desember 2023</span>
-                <h3 class="font-bold text-lg text-dark mt-1">Peringkat 2 Kelas</h3>
-                <p class="text-gray-600 text-sm">Kelas 8 - Semester 1</p>
-            </div>
-        </div>
-        <!-- Prestasi 3: Sertifikat / Piagam -->
-        <div class="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:col-span-2 flex flex-col items-center">
-            <img src="IMG_20260426_085559_HDR.jpg" alt="Sertifikat Penghargaan" class="w-full h-64 object-contain bg-gray-100 p-2">
-            <div class="p-3 text-center">
-                <span class="text-sm text-gray-500">Dokumen Resmi</span>
-                <h3 class="font-bold text-lg text-dark mt-1">Sertifikat & Piagam Penghargaan</h3>
-                <p class="text-gray-600 text-sm">Bukti pencapaian dan keikutsertaan dalam kegiatan prestasi</p>
-            </div>
-        </div>
-    </div>
+</nav><!-- Hero --><header class="hero"><img
+    src="IMG_20251001_161401.jpg"
+    alt="Foto Profil Nur Dwi Nova Pramajaya"
+    class="profile-photo"
+>
+
+<h1>NUR DWI NOVA PRAMAJAYA</h1>
+
+<p>
+    Siswa SMKN 1 Cirebon
+    <br>
+    Teknik Jaringan Komputer dan Telekomunikasi
+</p>
+
+<div class="hero-badge">
+    <i class="fa fa-circle text-green-400 text-xs"></i>
+    Sedang Belajar Jaringan & Teknologi
 </div>
-                
 
-                <!-- Kontak & Media Sosial -->
-                <div>
-                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5 text-center">
-                        <i class="fa fa-paper-plane mr-2"></i> Hubungi Saya
-                    </h2>
-                    <div class="flex items-center justify-center gap-10 py-4">
-                        <!-- Email -->
-                        <a href="mailto:nurdwinovapramajaya@gmail.com" target="_blank" class="flex flex-col items-center gap-2 group">
-                            <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-all duration-300 shadow-sm">
-                                <i class="fa fa-envelope text-2xl text-red-500 group-hover:text-white"></i>
-                            </div>
-                            <span class="text-sm text-gray-600">Email</span>
-                        </a>
-                        <!-- YouTube -->
-                        <a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank" class="flex flex-col items-center gap-2 group">
-                            <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-all duration-300 shadow-sm">
-                                <i class="fa fa-youtube-play text-2xl text-red-600 group-hover:text-white"></i>
-                            </div>
-                            <span class="text-sm text-gray-600">YouTube</span>
-                        </a>
-                        <!-- Instagram -->
-<a href="https://www.instagram.com/nvaa.pra" target="_blank" class="flex flex-col items-center gap-2 group">
-    <div class="w-14 h-14 bg-pink-50 rounded-full flex items-center justify-center group-hover:bg-pink-600 transition-all duration-300 shadow-sm">
-        <i class="fa fa-instagram text-2xl text-pink-600 group-hover:text-white"></i>
-    </div>
-    <span class="text-sm text-gray-600">Instagram</span>
-</a>
-                        
-                    </div>
-                </div>
+</header><main class="container"><!-- Informasi --><section class="reveal"><div class="section-header">
 
-            </div>
+    <h2>Informasi Pribadi</h2>
+
+    <p>Beberapa informasi singkat tentang saya</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="info-grid">
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-user"></i>
         </div>
+
+        <small>Nama Lengkap</small>
+
+        <h3>Nur Dwi Nova Pramajaya</h3>
+
     </div>
-</body>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-map-marker"></i>
+        </div>
+
+        <small>Tempat Lahir</small>
+
+        <h3>Kuningan</h3>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-calendar"></i>
+        </div>
+
+        <small>Tanggal Lahir</small>
+
+        <h3>30 November 2009</h3>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-school"></i>
+        </div>
+
+        <small>Sekolah</small>
+
+        <h3>SMKN 1 Cirebon</h3>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-graduation-cap"></i>
+        </div>
+
+        <small>Kelas</small>
+
+        <h3>XI TJKT 2</h3>
+
+    </div>
+
+
+    <div class="info-card">
+
+        <div class="info-icon">
+            <i class="fa fa-heartbeat"></i>
+        </div>
+
+        <small>Hobi</small>
+
+        <h3>Berlari</h3>
+
+    </div>
+
+
+</div>
+
+</section><!-- Tentang Saya --><section id="tentang" class="reveal"><div class="section-header">
+
+    <h2>Tentang Saya</h2>
+
+    <p>Perkenalan singkat mengenai diri saya</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="about">
+
+    <p>
+        Halo, perkenalkan nama saya <b>Nur Dwi Nova Pramajaya</b>.
+        Saya adalah siswa kelas <b>XI TJKT 2</b> di SMK Negeri 1 Cirebon.
+        Saat ini saya sedang menempuh pendidikan pada bidang Teknik
+        Jaringan Komputer dan Telekomunikasi.
+    </p>
+
+    <p>
+        Saya memiliki ketertarikan terhadap dunia teknologi, khususnya
+        jaringan komputer, konfigurasi perangkat, serta komunikasi data.
+        Saya memilih bidang ini karena ingin memahami lebih banyak tentang
+        bagaimana teknologi bekerja dan terus mengembangkan kemampuan saya.
+    </p>
+
+    <p>
+        Selain belajar teknologi, saya memiliki hobi berlari.
+        Menurut saya, berlari dapat melatih kedisiplinan dan ketahanan
+        untuk terus berusaha mencapai tujuan.
+    </p>
+
+    <div class="quote">
+        <i class="fa fa-quote-left mr-2"></i>
+        Terus melangkah meski berat, sampai mencapai garis akhir.
+    </div>
+
+</div>
+
+</section><!-- Keahlian --><section id="keahlian" class="reveal"><div class="section-header">
+
+    <h2>Bidang yang Dipelajari</h2>
+
+    <p>Beberapa kemampuan yang sedang saya kembangkan</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="skills">
+
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span>Jaringan Komputer</span>
+            <span class="skill-percent">80%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span>MikroTik</span>
+            <span class="skill-percent">70%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span>HTML & CSS</span>
+            <span class="skill-percent">55%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 55%;"></div>
+        </div>
+
+    </div>
+
+
+    <div class="skill-card">
+
+        <div class="skill-top">
+            <span>Cyber Security</span>
+            <span class="skill-percent">70%</span>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" style="width: 70%;"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+</section><!-- Pendidikan --><section id="pendidikan" class="reveal"><div class="section-header">
+
+    <h2>Perjalanan Pendidikan</h2>
+
+    <p>Riwayat pendidikan yang telah saya tempuh</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="education-grid">
+
+
+    <div class="education-card">
+
+        <img
+            src="IMG-20240913-WA0002.jpg"
+            alt="SDN Citikur"
+        >
+
+        <div class="education-content">
+
+            <h3>SDN Citikur</h3>
+
+            <p>2016 - 2022</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="education-card">
+
+        <img
+            src="IMG-20260517-WA0069.jpg"
+            alt="SMPN 2 Ciwaru"
+        >
+
+        <div class="education-content">
+
+            <h3>SMPN 2 Ciwaru</h3>
+
+            <p>2022 - 2025</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="education-card">
+
+        <img
+            src="IMG-20260420-WA0023.jpg"
+            alt="SMKN 1 Cirebon"
+        >
+
+        <div class="education-content">
+
+            <h3>SMKN 1 Cirebon</h3>
+
+            <p>2025 - Sekarang</p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section><!-- Prestasi --><section id="prestasi" class="reveal"><div class="section-header">
+
+    <h2>Prestasi & Penghargaan</h2>
+
+    <p>Beberapa pencapaian selama menempuh pendidikan</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="achievement-grid">
+
+
+    <div class="achievement-card">
+
+        <img
+            src="IMG_20230625_075920.jpg"
+            alt="Peringkat 3 Kelas"
+        >
+
+        <div class="achievement-content">
+
+            <i class="fa fa-trophy"></i>
+
+            <p>Juni 2023</p>
+
+            <h3>Peringkat 3 Kelas</h3>
+
+            <p>Kelas 7 Semester 2</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="achievement-card">
+
+        <img
+            src="IMG_20231223_145952.jpg"
+            alt="Peringkat 2 Kelas"
+        >
+
+        <div class="achievement-content">
+
+            <i class="fa fa-trophy"></i>
+
+            <p>Desember 2023</p>
+
+            <h3>Peringkat 2 Kelas</h3>
+
+            <p>Kelas 8 Semester 1</p>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<div class="certificate">
+
+    <img
+        src="IMG_20260426_085559_HDR.jpg"
+        alt="Sertifikat dan Piagam Penghargaan"
+    >
+
+    <div class="certificate-content">
+
+        <i class="fa fa-certificate text-amber-500 text-3xl"></i>
+
+        <h3 class="text-xl font-bold mt-3">
+            Sertifikat & Piagam Penghargaan
+        </h3>
+
+        <p class="text-slate-500 text-sm mt-2">
+            Bukti pencapaian dan keikutsertaan dalam kegiatan pendidikan.
+        </p>
+
+    </div>
+
+</div>
+
+</section><!-- Kontak --><section id="kontak" class="reveal"><div class="section-header">
+
+    <h2>Hubungi Saya</h2>
+
+    <p>Silakan hubungi saya melalui media berikut</p>
+
+    <div class="line"></div>
+
+</div>
+
+
+<div class="contact">
+
+
+    <a
+        href="mailto:nurdwinovapramajaya@gmail.com"
+        class="social"
+    >
+
+        <i class="fa fa-envelope email"></i>
+
+        <div>Email</div>
+
+    </a>
+
+
+    <a
+        href="https://www.youtube.com/@nurdwinovapramajaya"
+        target="_blank"
+        class="social"
+    >
+
+        <i class="fa fa-youtube-play youtube"></i>
+
+        <div>YouTube</div>
+
+    </a>
+
+
+    <a
+        href="https://www.instagram.com/nvaa.pra"
+        target="_blank"
+        class="social"
+    >
+
+        <i class="fa fa-instagram instagram"></i>
+
+        <div>Instagram</div>
+
+    </a>
+
+
+</div>
+
+</section></main><footer><p>
+    © 2026 Nur Dwi Nova Pramajaya
+</p>
+
+<p class="mt-2">
+    Website profil pribadi
+</p>
+
+</footer><!-- Animasi saat halaman discroll --><script>
+
+    const revealElements =
+        document.querySelectorAll('.reveal');
+
+
+    function showContent() {
+
+        revealElements.forEach(function(element) {
+
+            const position =
+                element.getBoundingClientRect().top;
+
+            const windowHeight =
+                window.innerHeight;
+
+
+            if (position < windowHeight - 80) {
+
+                element.classList.add('active');
+
+            }
+
+        });
+
+    }
+
+
+    window.addEventListener('scroll', showContent);
+
+
+    showContent();
+
+</script></body>
 </html>
-tambah kode verifikasi google 
