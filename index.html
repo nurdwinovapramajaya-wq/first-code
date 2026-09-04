@@ -1,1108 +1,1226 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <!-- Verifikasi Google Search Console -->
-    <meta name="google-site-verification" content="IV_IqFC-M4tCbwkt-PTtIVr3tttLzL9dqO3evfJuBp0" /><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Profil | Nur Dwi Nova Pramajaya</title>
-
-<meta name="description" content="Website profil pribadi Nur Dwi Nova Pramajaya, siswa Teknik Jaringan Komputer dan Telekomunikasi SMKN 1 Cirebon.">
-
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Font Awesome -->
-<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<!-- Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-    * {
-        box-sizing: border-box;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        margin: 0;
-        font-family: 'Poppins', sans-serif;
-        color: #1e293b;
-        background:
-            linear-gradient(135deg, #eef5ff 0%, #f8fbff 50%, #eaf4ff 100%);
-    }
-
-
-    /* Background sederhana */
-
-    .background-circle {
-        position: fixed;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.25;
-        z-index: -1;
-    }
-
-    .circle-one {
-        width: 300px;
-        height: 300px;
-        background: #60a5fa;
-        top: -100px;
-        left: -100px;
-    }
-
-    .circle-two {
-        width: 350px;
-        height: 350px;
-        background: #38bdf8;
-        bottom: -150px;
-        right: -100px;
-    }
-
-
-    /* Navbar */
-
-    nav {
-        position: sticky;
-        top: 15px;
-        z-index: 50;
-        width: 92%;
-        max-width: 1000px;
-        margin: 15px auto 0;
-    }
-
-    .nav-content {
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.8);
-        border-radius: 16px;
-        box-shadow: 0 8px 25px rgba(15, 76, 129, 0.08);
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 14px 22px;
-    }
-
-    .logo {
-        font-size: 17px;
-        font-weight: 700;
-        color: #0f4c81;
-    }
-
-    .nav-menu {
-        display: flex;
-        gap: 20px;
-    }
-
-    .nav-menu a {
-        text-decoration: none;
-        color: #64748b;
-        font-size: 13px;
-        transition: 0.3s;
-    }
-
-    .nav-menu a:hover {
-        color: #0f4c81;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        max-width: 1000px;
-        margin: 45px auto 0;
-        padding: 55px 25px;
-        text-align: center;
-
-        background:
-            linear-gradient(135deg, #0f4c81, #2563a6);
-
-        border-radius: 28px;
-
-        color: white;
-
-        box-shadow:
-            0 20px 50px rgba(15, 76, 129, 0.18);
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 50%;
-        border: 5px solid white;
-
-        margin: auto;
-
-        box-shadow:
-            0 8px 25px rgba(0, 0, 0, 0.2);
-
-        transition: 0.3s;
-    }
-
-    .profile-photo:hover {
-        transform: scale(1.03);
-    }
-
-    .hero h1 {
-        font-size: clamp(25px, 5vw, 42px);
-        margin-top: 20px;
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-
-    .hero p {
-        margin-top: 10px;
-        color: #dbeafe;
-    }
-
-    .hero-badge {
-        display: inline-block;
-
-        margin-top: 20px;
-        padding: 8px 18px;
-
-        border-radius: 50px;
-
-        background: rgba(255,255,255,0.15);
-        border: 1px solid rgba(255,255,255,0.2);
-
-        font-size: 13px;
-    }
-
-
-    /* Container */
-
-    .container {
-        width: 92%;
-        max-width: 1000px;
-        margin: 50px auto;
-    }
-
-
-    /* Section */
-
-    section {
-        margin-bottom: 70px;
-    }
-
-    .section-header {
-        margin-bottom: 30px;
-    }
-
-    .section-header h2 {
-        color: #0f4c81;
-        font-size: 25px;
-        font-weight: 700;
-    }
-
-    .section-header p {
-        color: #64748b;
-        font-size: 14px;
-        margin-top: 5px;
-    }
-
-    .line {
-        width: 70px;
-        height: 4px;
-
-        background:
-            linear-gradient(to right, #0f4c81, #38bdf8);
-
-        border-radius: 10px;
-
-        margin-top: 10px;
-    }
-
-
-    /* Kartu Informasi */
-
-    .info-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 18px;
-    }
-
-    .info-card {
-        background: white;
-        padding: 22px;
-
-        border-radius: 18px;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-
-        transition: 0.3s;
-    }
-
-    .info-card:hover {
-        transform: translateY(-5px);
-
-        box-shadow:
-            0 15px 35px rgba(15, 76, 129, 0.12);
-    }
-
-    .info-icon {
-        width: 45px;
-        height: 45px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 12px;
-
-        background: #eaf4ff;
-        color: #0f4c81;
-
-        margin-bottom: 15px;
-    }
-
-    .info-card small {
-        color: #94a3b8;
-    }
-
-    .info-card h3 {
-        font-size: 15px;
-        margin-top: 5px;
-        font-weight: 600;
-    }
-
-
-    /* Tentang Saya */
-
-    .about {
-        background: white;
-        padding: 30px;
-
-        border-radius: 20px;
-
-        line-height: 1.8;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-    }
-
-    .about p {
-        margin-bottom: 16px;
-        color: #475569;
-        text-align: justify;
-    }
-
-    .quote {
-        margin-top: 25px;
-
-        padding: 20px;
-
-        text-align: center;
-
-        background: #f0f7ff;
-
-        border-left: 4px solid #0f4c81;
-
-        border-radius: 12px;
-
-        color: #0f4c81;
-
-        font-weight: 600;
-    }
-
-
-    /* Skill */
-
-    .skills {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 18px;
-    }
-
-    .skill-card {
-        background: white;
-        padding: 22px;
-
-        border-radius: 18px;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-    }
-
-    .skill-top {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 12px;
-
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .skill-percent {
-        color: #0f4c81;
-    }
-
-    .progress {
-        height: 8px;
-        background: #e2e8f0;
-
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .progress-bar {
-        height: 100%;
-        background:
-            linear-gradient(to right, #0f4c81, #38bdf8);
-
-        border-radius: 10px;
-
-        transition: width 1s ease;
-    }
-
-
-    /* Pendidikan */
-
-    .education-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-    }
-
-    .education-card {
-        background: white;
-
-        border-radius: 18px;
-        overflow: hidden;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-
-        transition: 0.3s;
-    }
-
-    .education-card:hover {
-        transform: translateY(-6px);
-    }
-
-    .education-card img {
-        width: 100%;
-        height: 250px;
-
-        object-fit: contain;
-
-        background: #f8fafc;
-    }
-
-    .education-content {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .education-content h3 {
-        color: #0f4c81;
-        font-weight: 700;
-    }
-
-    .education-content p {
-        color: #64748b;
-        font-size: 13px;
-        margin-top: 5px;
-    }
-
-
-    /* Prestasi */
-
-    .achievement-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-    }
-
-    .achievement-card {
-        background: white;
-
-        border-radius: 18px;
-        overflow: hidden;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-
-        text-align: center;
-
-        transition: 0.3s;
-    }
-
-    .achievement-card:hover {
-        transform: translateY(-6px);
-    }
-
-    .achievement-card img {
-        width: 100%;
-        height: 250px;
-
-        object-fit: contain;
-
-        background: #f8fafc;
-        padding: 10px;
-    }
-
-    .achievement-content {
-        padding: 20px;
-    }
-
-    .achievement-content i {
-        color: #f59e0b;
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-
-    .achievement-content h3 {
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    .achievement-content p {
-        font-size: 13px;
-        color: #64748b;
-        margin-top: 5px;
-    }
-
-
-    /* Sertifikat */
-
-    .certificate {
-        margin-top: 25px;
-
-        background: white;
-
-        border-radius: 20px;
-        overflow: hidden;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-
-        text-align: center;
-    }
-
-    .certificate img {
-        width: 100%;
-        max-height: 450px;
-
-        object-fit: contain;
-
-        background: #f8fafc;
-
-        padding: 15px;
-    }
-
-    .certificate-content {
-        padding: 25px;
-    }
-
-
-    /* Kontak */
-
-    .contact {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 18px;
-    }
-
-    .social {
-        width: 150px;
-
-        padding: 25px;
-
-        background: white;
-
-        border-radius: 18px;
-
-        text-align: center;
-        text-decoration: none;
-
-        color: #1e293b;
-
-        box-shadow:
-            0 8px 25px rgba(15, 76, 129, 0.06);
-
-        transition: 0.3s;
-    }
-
-    .social:hover {
-        transform: translateY(-6px);
-    }
-
-    .social i {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
-
-    .email {
-        color: #ef4444;
-    }
-
-    .youtube {
-        color: #dc2626;
-    }
-
-    .instagram {
-        color: #db2777;
-    }
-
-
-    /* Footer */
-
-    footer {
-        text-align: center;
-
-        padding: 30px 20px;
-
-        color: #64748b;
-
-        font-size: 13px;
-    }
-
-
-    /* Animasi saat scroll */
-
-    .reveal {
-        opacity: 0;
-        transform: translateY(25px);
-
-        transition:
-            opacity 0.7s ease,
-            transform 0.7s ease;
-    }
-
-    .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-
-    /* Responsive */
-
-    @media (max-width: 650px) {
-
-        .nav-menu {
-            display: none;
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="IV_IqFC-M4tCbwkt-PTtIVr3tttLzL9dqO3evfJuBp0" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nur Dwi Nova Pramajaya | Profil</title>
+    <meta name="description" content="Website profil pribadi Nur Dwi Nova Pramajaya, siswa Teknik Jaringan Komputer dan Telekomunikasi SMKN 1 Cirebon." />
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/user.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        .hero {
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f7ff;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* ===== BACKGROUND ANIMASI ===== */
+        .bg-animation {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(96, 165, 250, 0.15) 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+                radial-gradient(circle at 50% 50%, rgba(15, 76, 129, 0.05) 0%, transparent 80%);
+            animation: bgPulse 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { transform: scale(1); opacity: 0.6; }
+            100% { transform: scale(1.05); opacity: 1; }
+        }
+
+        /* ===== PARTICLES ===== */
+        .particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(15, 76, 129, 0.2);
+            border-radius: 50%;
+            animation: floatParticle 15s infinite linear;
+        }
+
+        @keyframes floatParticle {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* ===== NAVBAR ===== */
+        nav {
+            position: sticky;
+            top: 15px;
+            z-index: 50;
             width: 92%;
-            padding: 45px 20px;
-            margin-top: 30px;
+            max-width: 1100px;
+            margin: 15px auto 0;
+        }
+
+        .nav-content {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 8px 35px rgba(15, 76, 129, 0.08);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 20px;
+            color: #0f4c81;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #475569;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: #0f4c81;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2.5px;
+            background: #0f4c81;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== HAMBURGER MENU ===== */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #0f4c81;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 20px 24px;
+            border-radius: 16px;
+            margin-top: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .mobile-menu a {
+            text-decoration: none;
+            color: #1e293b;
+            padding: 12px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #0f4c81;
+            padding-left: 10px;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu.show {
+            display: flex;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            max-width: 1100px;
+            margin: 35px auto 0;
+            padding: 65px 30px 80px;
+            text-align: center;
+            background: linear-gradient(145deg, #0f4c81 0%, #1a6bb5 50%, #2a7fd4 100%);
+            border-radius: 32px;
+            color: white;
+            box-shadow: 0 30px 70px rgba(15, 76, 129, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M0,60 C300,120 600,0 900,60 C1050,90 1150,70 1200,60 L1200,120 L0,120 Z' fill='%23f0f7ff'/%3E%3C/svg%3E") no-repeat bottom;
+            background-size: cover;
+            animation: waveMove 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes waveMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-30px); }
+        }
+
+        .hero-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero-circle-1 {
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            right: -100px;
+            animation: floatHero 10s ease-in-out infinite;
+        }
+
+        .hero-circle-2 {
+            width: 250px;
+            height: 250px;
+            bottom: -80px;
+            left: -60px;
+            animation: floatHero 12s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatHero {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-20px, -20px) scale(1.05); }
         }
 
         .profile-photo {
-            width: 120px;
-            height: 120px;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+            transition: 0.4s;
+            position: relative;
+            z-index: 2;
         }
 
+        .profile-photo:hover {
+            transform: scale(1.05) rotate(-3deg);
+            border-color: white;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 900;
+            margin-top: 20px;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 40px;
+            background: white;
+            margin-left: 4px;
+            animation: blink 0.9s step-end infinite;
+            vertical-align: text-bottom;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .hero p {
+            color: #dbeafe;
+            font-weight: 400;
+            font-size: 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            margin-top: 22px;
+            padding: 8px 26px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 14px;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+            backdrop-filter: blur(4px);
+            transition: 0.3s;
+        }
+
+        .hero-badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.03);
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        .section-header h2 {
+            color: #0f4c81;
+            font-size: 30px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 15px;
+            margin-top: 2px;
+        }
+
+        .line {
+            width: 75px;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c81, #38bdf8);
+            border-radius: 10px;
+            margin-top: 12px;
+        }
+
+        /* ===== CARDS ===== */
+        .info-card,
+        .skill-card,
+        .education-card,
+        .achievement-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 8px 30px rgba(15, 76, 129, 0.06);
+            transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-card::before,
+        .skill-card::before,
+        .education-card::before,
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #0f4c81, #38bdf8);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.4s;
+        }
+
+        .info-card:hover::before,
+        .skill-card:hover::before,
+        .education-card:hover::before,
+        .achievement-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .info-card:hover,
+        .skill-card:hover,
+        .education-card:hover,
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 55px rgba(15, 76, 129, 0.12);
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: #eaf4ff;
+            color: #0f4c81;
+            margin-bottom: 14px;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        .info-card:hover .info-icon {
+            background: #0f4c81;
+            color: white;
+            transform: rotate(-8deg) scale(1.05);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 18px;
+        }
+
+        /* ===== ABOUT ===== */
         .about {
-            padding: 22px;
+            background: white;
+            padding: 38px;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(15, 76, 129, 0.06);
+            line-height: 1.9;
+            border: 1px solid rgba(255, 255, 255, 0.5);
         }
 
-    }
-
-</style>
-
-</head><body><!-- Background --><div class="background-circle circle-one"></div>
-<div class="background-circle circle-two"></div><!-- Navbar --><nav><div class="nav-content">
-
-    <div class="logo">
-        NOVA PROFILE
-    </div>
-
-    <div class="nav-menu">
-        <a href="#tentang">Tentang</a>
-        <a href="#keahlian">Keahlian</a>
-        <a href="#pendidikan">Pendidikan</a>
-        <a href="#prestasi">Prestasi</a>
-        <a href="#kontak">Kontak</a>
-    </div>
-
-</div>
-
-</nav><!-- Hero --><header class="hero"><img
-    src="IMG_20251001_161401.jpg"
-    alt="Foto Profil Nur Dwi Nova Pramajaya"
-    class="profile-photo"
->
-
-<h1>NUR DWI NOVA PRAMAJAYA</h1>
-
-<p>
-    Siswa SMKN 1 Cirebon
-    <br>
-    Teknik Jaringan Komputer dan Telekomunikasi
-</p>
-
-<div class="hero-badge">
-    <i class="fa fa-circle text-green-400 text-xs"></i>
-    Sedang Belajar Jaringan & Teknologi
-</div>
-
-</header><main class="container"><!-- Informasi --><section class="reveal"><div class="section-header">
-
-    <h2>Informasi Pribadi</h2>
-
-    <p>Beberapa informasi singkat tentang saya</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="info-grid">
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-user"></i>
-        </div>
-
-        <small>Nama Lengkap</small>
-
-        <h3>Nur Dwi Nova Pramajaya</h3>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-map-marker"></i>
-        </div>
-
-        <small>Tempat Lahir</small>
-
-        <h3>Kuningan</h3>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-calendar"></i>
-        </div>
-
-        <small>Tanggal Lahir</small>
-
-        <h3>30 November 2009</h3>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-school"></i>
-        </div>
-
-        <small>Sekolah</small>
-
-        <h3>SMKN 1 Cirebon</h3>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-graduation-cap"></i>
-        </div>
-
-        <small>Kelas</small>
-
-        <h3>XI TJKT 2</h3>
-
-    </div>
-
-
-    <div class="info-card">
-
-        <div class="info-icon">
-            <i class="fa fa-heartbeat"></i>
-        </div>
-
-        <small>Hobi</small>
-
-        <h3>Berlari</h3>
-
-    </div>
-
-
-</div>
-
-</section><!-- Tentang Saya --><section id="tentang" class="reveal"><div class="section-header">
-
-    <h2>Tentang Saya</h2>
-
-    <p>Perkenalan singkat mengenai diri saya</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="about">
-
-    <p>
-        Halo, perkenalkan nama saya <b>Nur Dwi Nova Pramajaya</b>.
-        Saya adalah siswa kelas <b>XI TJKT 2</b> di SMK Negeri 1 Cirebon.
-        Saat ini saya sedang menempuh pendidikan pada bidang Teknik
-        Jaringan Komputer dan Telekomunikasi.
-    </p>
-
-    <p>
-        Saya memiliki ketertarikan terhadap dunia teknologi, khususnya
-        jaringan komputer, konfigurasi perangkat, serta komunikasi data.
-        Saya memilih bidang ini karena ingin memahami lebih banyak tentang
-        bagaimana teknologi bekerja dan terus mengembangkan kemampuan saya.
-    </p>
-
-    <p>
-        Selain belajar teknologi, saya memiliki hobi berlari.
-        Menurut saya, berlari dapat melatih kedisiplinan dan ketahanan
-        untuk terus berusaha mencapai tujuan.
-    </p>
-
-    <div class="quote">
-        <i class="fa fa-quote-left mr-2"></i>
-        Terus melangkah meski berat, sampai mencapai garis akhir.
-    </div>
-
-</div>
-
-</section><!-- Keahlian --><section id="keahlian" class="reveal"><div class="section-header">
-
-    <h2>Bidang yang Dipelajari</h2>
-
-    <p>Beberapa kemampuan yang sedang saya kembangkan</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="skills">
-
-
-    <div class="skill-card">
-
-        <div class="skill-top">
-            <span>Jaringan Komputer</span>
-            <span class="skill-percent">80%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar" style="width: 80%;"></div>
-        </div>
-
-    </div>
-
-
-    <div class="skill-card">
-
-        <div class="skill-top">
-            <span>MikroTik</span>
-            <span class="skill-percent">70%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar" style="width: 70%;"></div>
-        </div>
-
-    </div>
-
-
-    <div class="skill-card">
-
-        <div class="skill-top">
-            <span>HTML & CSS</span>
-            <span class="skill-percent">55%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar" style="width: 55%;"></div>
-        </div>
-
-    </div>
-
-
-    <div class="skill-card">
-
-        <div class="skill-top">
-            <span>Cyber Security</span>
-            <span class="skill-percent">70%</span>
-        </div>
-
-        <div class="progress">
-            <div class="progress-bar" style="width: 70%;"></div>
-        </div>
-
-    </div>
-
-
-</div>
-
-</section><!-- Pendidikan --><section id="pendidikan" class="reveal"><div class="section-header">
-
-    <h2>Perjalanan Pendidikan</h2>
-
-    <p>Riwayat pendidikan yang telah saya tempuh</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="education-grid">
-
-
-    <div class="education-card">
-
-        <img
-            src="IMG-20240913-WA0002.jpg"
-            alt="SDN Citikur"
-        >
-
-        <div class="education-content">
-
-            <h3>SDN Citikur</h3>
-
-            <p>2016 - 2022</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="education-card">
-
-        <img
-            src="IMG-20260517-WA0069.jpg"
-            alt="SMPN 2 Ciwaru"
-        >
-
-        <div class="education-content">
-
-            <h3>SMPN 2 Ciwaru</h3>
-
-            <p>2022 - 2025</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="education-card">
-
-        <img
-            src="IMG-20260420-WA0023.jpg"
-            alt="SMKN 1 Cirebon"
-        >
-
-        <div class="education-content">
-
-            <h3>SMKN 1 Cirebon</h3>
-
-            <p>2025 - Sekarang</p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-</section><!-- Prestasi --><section id="prestasi" class="reveal"><div class="section-header">
-
-    <h2>Prestasi & Penghargaan</h2>
-
-    <p>Beberapa pencapaian selama menempuh pendidikan</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="achievement-grid">
-
-
-    <div class="achievement-card">
-
-        <img
-            src="IMG_20230625_075920.jpg"
-            alt="Peringkat 3 Kelas"
-        >
-
-        <div class="achievement-content">
-
-            <i class="fa fa-trophy"></i>
-
-            <p>Juni 2023</p>
-
-            <h3>Peringkat 3 Kelas</h3>
-
-            <p>Kelas 7 Semester 2</p>
-
-        </div>
-
-    </div>
-
-
-    <div class="achievement-card">
-
-        <img
-            src="IMG_20231223_145952.jpg"
-            alt="Peringkat 2 Kelas"
-        >
-
-        <div class="achievement-content">
-
-            <i class="fa fa-trophy"></i>
-
-            <p>Desember 2023</p>
-
-            <h3>Peringkat 2 Kelas</h3>
-
-            <p>Kelas 8 Semester 1</p>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-<div class="certificate">
-
-    <img
-        src="IMG_20260426_085559_HDR.jpg"
-        alt="Sertifikat dan Piagam Penghargaan"
-    >
-
-    <div class="certificate-content">
-
-        <i class="fa fa-certificate text-amber-500 text-3xl"></i>
-
-        <h3 class="text-xl font-bold mt-3">
-            Sertifikat & Piagam Penghargaan
-        </h3>
-
-        <p class="text-slate-500 text-sm mt-2">
-            Bukti pencapaian dan keikutsertaan dalam kegiatan pendidikan.
-        </p>
-
-    </div>
-
-</div>
-
-</section><!-- Kontak --><section id="kontak" class="reveal"><div class="section-header">
-
-    <h2>Hubungi Saya</h2>
-
-    <p>Silakan hubungi saya melalui media berikut</p>
-
-    <div class="line"></div>
-
-</div>
-
-
-<div class="contact">
-
-
-    <a
-        href="mailto:nurdwinovapramajaya@gmail.com"
-        class="social"
-    >
-
-        <i class="fa fa-envelope email"></i>
-
-        <div>Email</div>
-
-    </a>
-
-
-    <a
-        href="https://www.youtube.com/@nurdwinovapramajaya"
-        target="_blank"
-        class="social"
-    >
-
-        <i class="fa fa-youtube-play youtube"></i>
-
-        <div>YouTube</div>
-
-    </a>
-
-
-    <a
-        href="https://www.instagram.com/nvaa.pra"
-        target="_blank"
-        class="social"
-    >
-
-        <i class="fa fa-instagram instagram"></i>
-
-        <div>Instagram</div>
-
-    </a>
-
-
-</div>
-
-</section></main><footer><p>
-    © 2026 Nur Dwi Nova Pramajaya
-</p>
-
-<p class="mt-2">
-    Website profil pribadi
-</p>
-
-</footer><!-- Animasi saat halaman discroll --><script>
-
-    const revealElements =
-        document.querySelectorAll('.reveal');
-
-
-    function showContent() {
-
-        revealElements.forEach(function(element) {
-
-            const position =
-                element.getBoundingClientRect().top;
-
-            const windowHeight =
-                window.innerHeight;
-
-
-            if (position < windowHeight - 80) {
-
-                element.classList.add('active');
-
+        .about p {
+            color: #475569;
+            text-align: justify;
+            margin-bottom: 16px;
+        }
+
+        .about p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            color: #0f4c81;
+            font-weight: 600;
+        }
+
+        .quote {
+            margin-top: 28px;
+            padding: 24px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #f0f7ff, #e6f0fa);
+            border-left: 5px solid #0f4c81;
+            border-radius: 14px;
+            color: #0f4c81;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* ===== SKILLS ===== */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .skill-percent {
+            color: #0f4c81;
+        }
+
+        .progress {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #0f4c81, #38bdf8);
+            border-radius: 10px;
+            transition: width 1.5s ease;
+            width: 0;
+        }
+
+        /* ===== EDUCATION & ACHIEVEMENT ===== */
+        .education-grid,
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 22px;
+        }
+
+        .education-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 16px 16px 0 0;
+            background: #f8fafc;
+            transition: 0.4s;
+        }
+
+        /* ===== PERBAIKAN: FOTO PRESTASI MENYESUAIKAN ===== */
+        .achievement-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #f8fafc;
+            padding: 8px;
+            border-radius: 16px 16px 0 0;
+            transition: 0.4s;
+        }
+
+        .education-card:hover img,
+        .achievement-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .education-content,
+        .achievement-content {
+            padding: 20px 20px 22px;
+            text-align: center;
+        }
+
+        .education-content h3,
+        .achievement-content h3 {
+            color: #0f4c81;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .achievement-content i {
+            color: #f59e0b;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        /* ===== CERTIFICATE ===== */
+        .certificate {
+            margin-top: 30px;
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(15, 76, 129, 0.06);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: 0.4s;
+        }
+
+        .certificate:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(15, 76, 129, 0.1);
+        }
+
+        .certificate img {
+            width: 100%;
+            max-height: 420px;
+            object-fit: contain;
+            background: #f8fafc;
+            padding: 20px;
+        }
+
+        .certificate-content {
+            padding: 25px 30px 30px;
+        }
+
+        .cert-badge {
+            display: inline-block;
+            background: #f0f7ff;
+            color: #0f4c81;
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 4px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social {
+            width: 160px;
+            padding: 26px 20px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #1e293b;
+            box-shadow: 0 8px 30px rgba(15, 76, 129, 0.06);
+            transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .social:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 55px rgba(15, 76, 129, 0.12);
+        }
+
+        .social i {
+            font-size: 32px;
+            margin-bottom: 10px;
+            transition: 0.4s;
+        }
+
+        .social:hover i {
+            transform: scale(1.2) rotate(-6deg);
+        }
+
+        .social .label {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .email { color: #ef4444; }
+        .youtube { color: #dc2626; }
+        .instagram { color: #db2777; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px 20px 30px;
+            color: #94a3b8;
+            font-size: 14px;
+            border-top: 1px solid rgba(15, 76, 129, 0.06);
+            margin-top: 20px;
+        }
+
+        footer .footer-icons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            margin-bottom: 16px;
+        }
+
+        footer .footer-icons a {
+            color: #94a3b8;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        footer .footer-icons a:hover {
+            color: #0f4c81;
+            transform: translateY(-3px);
+        }
+
+        /* ===== REVEAL ANIMATION ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== BACK TO TOP ===== */
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #0f4c81;
+            color: white;
+            border: none;
+            padding: 15px 17px;
+            border-radius: 50%;
+            box-shadow: 0 10px 35px rgba(15, 76, 129, 0.35);
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 100;
+            font-size: 16px;
+        }
+
+        #backToTop:hover {
+            background: #1a6bb5;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 45px rgba(15, 76, 129, 0.4);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
             }
 
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 45px 20px 70px;
+                margin-top: 20px;
+                border-radius: 24px;
+            }
+
+            .profile-photo {
+                width: 130px;
+                height: 130px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .about {
+                padding: 24px;
+            }
+
+            .container {
+                padding: 0 15px;
+                margin: 35px auto;
+            }
+
+            section {
+                margin-bottom: 50px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .education-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                gap: 14px;
+            }
+
+            .social {
+                width: 140px;
+                padding: 20px 14px;
+            }
+
+            .wave {
+                height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .social {
+                width: 120px;
+                padding: 16px 10px;
+            }
+
+            .social i {
+                font-size: 26px;
+            }
+
+            .achievement-card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== BACKGROUND ===== -->
+    <div class="bg-animation"></div>
+
+    <!-- ===== PARTICLES ===== -->
+    <div class="particles" id="particles"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">NOVA<span>.</span></div>
+
+            <div class="nav-menu">
+                <a href="#tentang">Tentang</a>
+                <a href="#keahlian">Keahlian</a>
+                <a href="#pendidikan">Pendidikan</a>
+                <a href="#prestasi">Prestasi</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#tentang">Tentang</a>
+            <a href="#keahlian">Keahlian</a>
+            <a href="#pendidikan">Pendidikan</a>
+            <a href="#prestasi">Prestasi</a>
+            <a href="#kontak">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-circle hero-circle-1"></div>
+        <div class="hero-circle hero-circle-2"></div>
+        <div class="wave"></div>
+
+        <img src="IMG_20251001_161401.jpg" alt="Foto Profil Nur Dwi Nova Pramajaya" class="profile-photo" />
+
+        <h1>
+            <span id="typing-text"></span>
+            <span class="cursor"></span>
+        </h1>
+
+        <p>Siswa SMKN 1 Cirebon • Teknik Jaringan Komputer & Telekomunikasi</p>
+
+        <div class="hero-badge">
+            <i class="fas fa-circle text-green-400 text-xs"></i>
+            Sedang Belajar & Berkembang
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="container">
+
+        <!-- ===== INFORMASI ===== -->
+        <section class="reveal">
+            <div class="section-header">
+                <h2>Informasi Pribadi</h2>
+                <p>Data diri singkat</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-user"></i></div>
+                    <small class="text-slate-400 text-xs">Nama Lengkap</small>
+                    <h3 class="text-base font-bold mt-1">Nur Dwi Nova Pramajaya</h3>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <small class="text-slate-400 text-xs">Tempat Lahir</small>
+                    <h3 class="text-base font-bold mt-1">Kuningan</h3>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <small class="text-slate-400 text-xs">Tanggal Lahir</small>
+                    <h3 class="text-base font-bold mt-1">30 November 2009</h3>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-school"></i></div>
+                    <small class="text-slate-400 text-xs">Sekolah</small>
+                    <h3 class="text-base font-bold mt-1">SMKN 1 Cirebon</h3>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <small class="text-slate-400 text-xs">Kelas</small>
+                    <h3 class="text-base font-bold mt-1">XI TJKT 2</h3>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-heart"></i></div>
+                    <small class="text-slate-400 text-xs">Hobi</small>
+                    <h3 class="text-base font-bold mt-1">Berlari</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TENTANG SAYA (PARAGRAF REVISI) ===== -->
+        <section id="tentang" class="reveal">
+            <div class="section-header">
+                <h2>Tentang Saya</h2>
+                <p>Kenali lebih dekat</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="about">
+                <p>
+                    <span class="highlight">Halo, saya Nur Dwi Nova Pramajaya!</span>
+                    Seorang siswa kelas <span class="highlight">XI TJKT 2</span> di 
+                    <span class="highlight">SMK Negeri 1 Cirebon</span>, 
+                    dengan fokus pada bidang <span class="highlight">Teknik Jaringan Komputer dan Telekomunikasi</span>. 
+                    Bagi saya, teknologi bukan sekadar pelajaran — tapi sebuah 
+                    <span class="highlight">panggilan untuk terus belajar dan berinovasi</span>.
+                </p>
+                <p>
+                    Ketertarikan saya terhadap dunia teknologi dimulai dari rasa penasaran 
+                    tentang bagaimana perangkat saling terhubung dan berkomunikasi. 
+                    Kini, saya mendalami <span class="highlight">jaringan komputer</span>, 
+                    konfigurasi perangkat, serta <span class="highlight">keamanan siber</span> — 
+                    bidang yang menurut saya sangat relevan dan menantang di era digital ini.
+                </p>
+                <p>
+                    Di luar dunia teknologi, saya memiliki hobi <span class="highlight">berlari</span>. 
+                    Setiap langkah di lintasan mengajarkan saya tentang 
+                    <span class="highlight">kedisiplinan, ketahanan, dan konsistensi</span> — 
+                    nilai-nilai yang saya bawa juga dalam proses belajar. 
+                    Saya percaya, <span class="highlight">perjalanan seribu mil dimulai dengan satu langkah</span>, 
+                    dan saya akan terus melangkah untuk mencapai mimpi-mimpi saya.
+                </p>
+
+                <div class="quote">
+                    <i class="fas fa-quote-left mr-3 text-blue-400"></i>
+                    "Terus melangkah meski berat, sampai mencapai garis akhir."
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== KEAHLIAN ===== -->
+        <section id="keahlian" class="reveal">
+            <div class="section-header">
+                <h2>Bidang yang Dipelajari</h2>
+                <p>Kemampuan yang sedang dikembangkan</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="skills">
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <span>Jaringan Komputer</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="85"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <span>MikroTik</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <span>HTML & CSS</span>
+                        <span class="skill-percent">65%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="65"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-top">
+                        <span>Cyber Security</span>
+                        <span class="skill-percent">70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" data-width="70"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PENDIDIKAN ===== -->
+        <section id="pendidikan" class="reveal">
+            <div class="section-header">
+                <h2>Perjalanan Pendidikan</h2>
+                <p>Riwayat sekolah</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <img src="IMG-20240913-WA0002.jpg" alt="SDN Citikur" />
+                    <div class="education-content">
+                        <h3>SDN Citikur</h3>
+                        <p class="text-sm text-slate-500">2016 - 2022</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <img src="IMG-20260517-WA0069.jpg" alt="SMPN 2 Ciwaru" />
+                    <div class="education-content">
+                        <h3>SMPN 2 Ciwaru</h3>
+                        <p class="text-sm text-slate-500">2022 - 2025</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <img src="IMG-20260420-WA0023.jpg" alt="SMKN 1 Cirebon" />
+                    <div class="education-content">
+                        <h3>SMKN 1 Cirebon</h3>
+                        <p class="text-sm text-slate-500">2025 - Sekarang</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PRESTASI ===== -->
+        <section id="prestasi" class="reveal">
+            <div class="section-header">
+                <h2>Prestasi & Penghargaan</h2>
+                <p>Pencapaian selama menempuh pendidikan</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <img src="IMG_20230625_075920.jpg" alt="Peringkat 3 Kelas" />
+                    <div class="achievement-content">
+                        <i class="fas fa-trophy"></i>
+                        <p class="text-sm text-slate-500">Juni 2023</p>
+                        <h3>Peringkat 3 Kelas</h3>
+                        <p class="text-sm text-slate-500">Kelas 7 Semester 2</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <img src="IMG_20231223_145952.jpg" alt="Peringkat 2 Kelas" />
+                    <div class="achievement-content">
+                        <i class="fas fa-trophy"></i>
+                        <p class="text-sm text-slate-500">Desember 2023</p>
+                        <h3>Peringkat 2 Kelas</h3>
+                        <p class="text-sm text-slate-500">Kelas 8 Semester 1</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== SERTIFIKAT ===== -->
+            <div class="certificate">
+                <img src="IMG_20260426_085559_HDR.jpg" alt="Sertifikat dan Piagam Penghargaan" />
+                <div class="certificate-content">
+                    <div class="flex justify-center gap-2 text-amber-500 text-3xl">
+                        <i class="fas fa-certificate"></i>
+                        <i class="fas fa-medal"></i>
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mt-3">Sertifikat & Piagam Penghargaan</h3>
+                    <p class="text-slate-500 text-sm mt-2 max-w-md mx-auto">
+                        Bukti pencapaian dan dedikasi dalam kegiatan akademik & non-akademik
+                    </p>
+                    <div class="mt-4 flex flex-wrap justify-center gap-2">
+                        <span class="cert-badge">🏆 Juara 3 Kelas</span>
+                        <span class="cert-badge">🏅 Peringkat 2</span>
+                        <span class="cert-badge">📜 Piagam Penghargaan</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== KONTAK ===== -->
+        <section id="kontak" class="reveal">
+            <div class="section-header">
+                <h2>Hubungi Saya</h2>
+                <p>Silakan hubungi melalui media berikut</p>
+                <div class="line"></div>
+            </div>
+
+            <div class="contact">
+                <a href="mailto:nurdwinovapramajaya@gmail.com" class="social">
+                    <i class="fas fa-envelope email"></i>
+                    <div class="label">Email</div>
+                </a>
+                <a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank" class="social">
+                    <i class="fab fa-youtube youtube"></i>
+                    <div class="label">YouTube</div>
+                </a>
+                <a href="https://www.instagram.com/nvaa.pra" target="_blank" class="social">
+                    <i class="fab fa-instagram instagram"></i>
+                    <div class="label">Instagram</div>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-icons">
+            <a href="mailto:nurdwinovapramajaya@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nvaa.pra" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 Nur Dwi Nova Pramajaya</p>
+        <p class="text-sm mt-1">Dibuat dengan <i class="fas fa-heart text-red-500"></i> dari Cirebon</p>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ===== PARTICLES =====
+        (function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 25; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDuration = (12 + Math.random() * 18) + 's';
+                particle.style.animationDelay = (Math.random() * 20) + 's';
+                particle.style.width = (2 + Math.random() * 5) + 'px';
+                particle.style.height = particle.style.width;
+                container.appendChild(particle);
+            }
+        })();
+
+        // ===== HAMBURGER MENU =====
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('show');
         });
 
-    }
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('show');
+            });
+        });
 
+        // ===== TYPING EFFECT =====
+        const texts = ["NUR DWI NOVA PRAMAJAYA", "Future Network Engineer", "TJKT Student"];
+        let count = 0,
+            index = 0,
+            current = "",
+            letter = "";
 
-    window.addEventListener('scroll', showContent);
+        function type() {
+            if (count === texts.length) count = 0;
+            current = texts[count];
+            letter = current.slice(0, ++index);
+            document.getElementById("typing-text").textContent = letter;
+            if (letter.length === current.length) {
+                count++;
+                index = 0;
+                setTimeout(type, 2000);
+            } else {
+                setTimeout(type, 100);
+            }
+        }
+        type();
 
+        // ===== REVEAL ANIMATION =====
+        const reveals = document.querySelectorAll('.reveal');
 
-    showContent();
+        function reveal() {
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 80) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
 
-</script></body>
+        // ===== SKILL PROGRESS BAR =====
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        function animateProgress() {
+            progressBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50 && rect.bottom > 0) {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateProgress);
+        setTimeout(animateProgress, 500);
+
+        // ===== BACK TO TOP =====
+        const backBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                backBtn.style.display = 'block';
+            } else {
+                backBtn.style.display = 'none';
+            }
+        });
+
+        backBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
 </html>
